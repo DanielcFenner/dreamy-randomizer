@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  background-color: var(--blue1);
+  padding: 0.5rem;
+  font-weight: 700;
+  color: var(--blue12);
+  padding: 1rem;
+  background-color: var(--blue1);
+}
+
+.header--underline {
+  height: 2px;
+  background: linear-gradient(45deg, var(--pink9), var(--blue9));
+  width: 14ch;
+  margin-top: 0.5rem;
+}
+
+.header a {
+  margin-top: 0.5rem;
+  font-size: 0.5rem;
+  text-decoration: none;
+  color: var(--blue12);
+}
+
+.header--themeToggle {
+  cursor: pointer;
+  position: absolute;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+}

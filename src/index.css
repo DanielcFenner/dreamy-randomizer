@@ -1,0 +1,136 @@
+@import "@radix-ui/colors/blue.css";
+@import "@radix-ui/colors/blueDark.css";
+@import "@radix-ui/colors/pink.css";
+@import "@radix-ui/colors/pinkDark.css";
+@import "@radix-ui/colors/slate.css";
+@import "@radix-ui/colors/slateDark.css";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap");
+
+@keyframes popin {
+  from {
+    transform: scale(0%);
+    opacity: 0%;
+  }
+  to {
+    transform: scale(100%);
+    opacity: 100%;
+  }
+}
+
+:root {
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background-color: var(--pink1);
+  min-height: 100vh;
+}
+
+.wrapperCenter {
+  width: min(100%, 80ch);
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0rem 1rem;
+  gap: 1rem;
+}
+
+.main--button {
+  grid-column: span 2;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 2rem;
+  color: var(--pink1);
+  background: linear-gradient(45deg, var(--pink9), var(--pink8));
+  border-radius: 0.5rem;
+  border: none;
+  background-size: 100%;
+  transition: 0.5s all;
+}
+
+.main--button:hover {
+  background-size: 200%;
+}
+
+.main--reset {
+  grid-column: span 2;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 2rem;
+  color: var(--pink1);
+  background: linear-gradient(45deg, var(--pink9), var(--pink8));
+  border-radius: 0.5rem;
+  border: none;
+  background-size: 100%;
+  transition: 0.5s all;
+}
+
+.main--reset:hover {
+  background-size: 200%;
+}
+
+.main--grid {
+  position: relative;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.main--gridElement {
+  font-size: 1.5rem;
+  color: var(--pink11);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--pink3);
+  height: 70px;
+  border-radius: 0.5rem;
+}
+
+.main--gridDreamies {
+  position: absolute;
+  width: 100%;
+  grid-column: span 2;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.main--gridElementDreamies {
+  top: 0;
+  left: 0;
+  font-size: 1.125rem;
+  color: var(--pink11);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  background-color: var(--pink3);
+  height: 70px;
+  border-radius: 0.5rem;
+  animation: popin;
+  animation-duration: 0.5s;
+}
+
+.dreamiesImg {
+  width: 70px;
+  border-top-left-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+}
