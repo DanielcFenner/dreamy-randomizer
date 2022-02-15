@@ -45,19 +45,31 @@ function App() {
   }
 
   const gridDreamies = [];
-  for (let i = 0; i < count; i++) {
-    let dreamy = dreamies[i];
+  if (dreamies.length === 10) {
+    for (let i = 0; i < 10; i++) {
+      let dreamy = dreamies[i];
+      let displayBoy = "none";
+      if (i < count) {
+        displayBoy = "flex";
+      }
 
-    gridDreamies.push(
-      <div key={i} className="main--gridElementDreamies">
-        <img src={dreamy.img} className="dreamiesImg"></img>
-        <div className="dreamiesText">{dreamy.name}</div>
-      </div>
-    );
+      gridDreamies.push(
+        <div
+          key={i}
+          className="main--gridElementDreamies"
+          style={{ display: displayBoy }}
+        >
+          <img src={dreamy.img} className="dreamiesImg"></img>
+          <div className="dreamiesText">{dreamy.name}</div>
+        </div>
+      );
+    }
   }
 
   function countUp() {
-    setCount((oldCount) => (oldCount < 10 ? oldCount + 1 : oldCount));
+    if (dreamies.length === 10) {
+      setCount((oldCount) => (oldCount < 10 ? oldCount + 1 : oldCount));
+    }
   }
 
   function resetButton() {
